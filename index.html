@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="author" href="humans.txt">
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="text-center game-title">Simon Game!</h1>
+        <section class="row">
+            <aside class="col-md-3 col-xs-12">
+                <h3 class="rules-heading">Rules and Instructions</h3>
+                <ul class="rules">
+                    <li>Game presents you a series of light flashes. After the game shows you those, you gotta follow them by clicking</li>
+                    <li>As soon as you complete the trail correctly, you're given the completed trail and a next light flash which then again you gotta follow</li>
+                    <li>As soon as you complete 20 light flashes, you're the winner</li>
+                    <li>You can also increase the game intensity from 20 to what you think you're capable of</li>
+                    <li>In non-strict mode once you break the sequence of light flashes, you're reminded of the correct sequence to follow after which you can try again</li>
+                    <li>In strict mode, once you break the sequence, you're game is done and you loose. You can restart the game to play from start</li>
+                </ul>
+            </aside>
+            <div class="col-md-9 col-xs-12">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 game-stats">
+                        <h4 class="high-score-title">
+            High Score: <span class="high-score">0</span>
+          </h4>
+                        <h4 class="game-state">
+            Game not yet started
+          </h4>
+                        <h4 class="game-result">
+            
+          </h4>
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                        <div class="simon-wrap">
+                            <div class="simon-blue simon" data-val="1">
+                            </div>
+                            <div class="simon-yellow simon" data-val="2">
+                            </div>
+                            <div class="simon-green simon" data-val="3">
+                            </div>
+                            <div class="simon-red simon" data-val="4">
+                            </div>
+                            <div class="simon-controls" data-val="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
