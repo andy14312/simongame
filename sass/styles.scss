@@ -1,0 +1,189 @@
+@font-face {
+    font-family: "bungee";
+    src: url("../fonts/Bungee-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "indieflower";
+    src: url("../fonts/IndieFlower.ttf") format("truetype");
+}
+$backgroundColor : #E5A57E;
+$headersFont : "bungee", cursive;
+$bodyFont: 'indieflower', cursive;
+$mainColor: #4C0804;
+$mainColorLighterShade: #AD1705;
+$simonBlueColor: #001E40;
+$simonBlueHover: #003878;
+$simonBlueFlash: #003B7D;
+$simonYellowColor: #A39E13;
+$simonYellowHover: #C4BF00;
+$simonYellowFlash: #F7F01D;
+$simonGreenColor: #36700D;
+$simonGreenHover: #4A9C11;
+$simonGreenFlash: #53AD14;
+$simonRedColor: #8F1304;
+$simonRedHover: #911008;
+$simonRedFlash: #FF0A00;
+
+
+
+body {
+  background-color: $backgroundColor;
+  font-family: $bodyFont;
+  color: $mainColor;
+}
+
+.game-title {
+  font-family: $headersFont;
+  background: repeating-linear-gradient(-45deg, #5E2B44, #703327 2px, #FF7506 2px, #5E2B44 5px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.rules-heading {
+  font-family: $headersFont;
+}
+
+.rules {
+  list-style: none;
+  padding-left: 0;
+  font-weight: bold;
+}
+
+.high-score-title {
+  font-family: $headersFont;
+}
+
+.game-stats {
+  .game-state,.game-result {
+    font-weight: bold;
+  }
+}
+
+.simon-wrap {
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.simon {
+  width: 40%;
+  height: 40%;
+  display: inline-block;
+  cursor: pointer;
+  border: 20px solid $mainColor;
+}
+
+.simon-blue {
+  background-color: $simonBlueColor;
+  transition: 0s 0.8s;
+  -webkit-transition: 0s 0.8s;
+  border-radius: 150% 0 0 0;
+}
+
+.simon-blue:active {
+  background-color: $simonBlueFlash;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.simon-red {
+  background-color: $simonRedColor;
+  transition: 0s 0.8s;
+  -webkit-transition: 0s 0.8s;
+  border-radius: 0 0 150% 0;
+}
+
+.simon-red:active {
+  background-color: $simonRedFlash;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+.simon-green {
+  background-color: $simonGreenColor;
+  transition: 0s 0.8s;
+  -webkit-transition: 0s 0.8s;
+  border-radius: 0 0 0 150%;
+}
+
+.simon-green:active {
+  background-color: $simonGreenFlash;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+.simon-yellow {
+  background-color: $simonYellowColor;
+  transition: 0s 0.8s;
+  -webkit-transition: 0s 0.8s;
+  border-radius: 0 150% 0 0;
+}
+
+.simon-yellow:active {
+  background-color: $simonYellowFlash;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.simon-wrap {
+  .simon-controls {
+    position: absolute;
+    width: 43%;
+    height: 43%;
+    border-radius: 50%;
+    border: 20px solid $mainColor;
+    top: 19%;
+    left: 19%;
+    background: radial-gradient(circle,$simonRedColor 10%,$simonBlueColor);
+    text-align: center;
+    .start-btn {
+      font-family: $headersFont;
+      background: linear-gradient(#423F3F,#2B2929);
+      position: relative;
+      top: 35px;
+      text-align: center;
+      font-size: 26px;
+      padding: 13px;
+      border-radius: 50px;
+      display: inline-block;
+      color: $simonYellowColor;
+      cursor: pointer;
+      box-shadow: 0 7px 0 0px #1C1B1B;
+
+      &.pressed {
+        box-shadow: 0px 7px 7px 0px #1C1B1B inset;
+      }
+    }
+  
+    .strict-mode-wrap {
+      position: relative;
+      margin-top: 60px;
+      font-family: $headersFont;
+      color: $simonYellowColor;
+      .strict-btn-wrap {
+        width: 30px;
+        background-color: #BAB1B1;
+        border-radius: 10px;
+        height: 15px;
+        display: inline-block;
+        margin: -2px 10px;
+
+        .strict-btn {
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          &.on {
+            background-color: $simonGreenColor;
+            float: right;
+          }
+          &.off {
+            float: left;
+            background-color: #454141;
+          }
+        }
+      }
+    }
+  }
+}

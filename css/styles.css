@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "bungee";
+  src: url("../fonts/Bungee-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "indieflower";
+  src: url("../fonts/IndieFlower.ttf") format("truetype"); }
+
+body {
+  background-color: #E5A57E;
+  font-family: "indieflower", cursive;
+  color: #4C0804; }
+
+.game-title {
+  font-family: "bungee", cursive;
+  background: repeating-linear-gradient(-45deg, #5E2B44, #703327 2px, #FF7506 2px, #5E2B44 5px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  margin-bottom: 40px; }
+
+.rules-heading {
+  font-family: "bungee", cursive; }
+
+.rules {
+  list-style: none;
+  padding-left: 0;
+  font-weight: bold; }
+
+.high-score-title {
+  font-family: "bungee", cursive; }
+
+.game-stats .game-state, .game-stats .game-result {
+  font-weight: bold; }
+
+.simon-wrap {
+  position: relative;
+  width: 600px;
+  height: 600px; }
+
+.simon {
+  width: 40%;
+  height: 40%;
+  display: inline-block;
+  cursor: pointer;
+  border: 20px solid #4C0804; }
+
+.simon-blue {
+  background-color: #001E40;
+  transition: 0s 0.8s;
+  -webkit-transition: 0s 0.8s;
+  border-radius: 150% 0 0 0; }
+
+.simon-blue:active {
+  background-color: #003B7D;
+  -webkit-transition: 0s;
+  transition: 0s; }
+
+.simon-red {
+  background-color: #8F1304;
+  transition: 0s 0.8s;
+  -webkit-transition: 0s 0.8s;
+  border-radius: 0 0 150% 0; }
+
+.simon-red:active {
+  background-color: #FF0A00;
+  -webkit-transition: 0s;
+  transition: 0s; }
+
+.simon-green {
+  background-color: #36700D;
+  transition: 0s 0.8s;
+  -webkit-transition: 0s 0.8s;
+  border-radius: 0 0 0 150%; }
+
+.simon-green:active {
+  background-color: #53AD14;
+  -webkit-transition: 0s;
+  transition: 0s; }
+
+.simon-yellow {
+  background-color: #A39E13;
+  transition: 0s 0.8s;
+  -webkit-transition: 0s 0.8s;
+  border-radius: 0 150% 0 0; }
+
+.simon-yellow:active {
+  background-color: #F7F01D;
+  -webkit-transition: 0s;
+  transition: 0s; }
+
+.simon-wrap .simon-controls {
+  position: absolute;
+  width: 43%;
+  height: 43%;
+  border-radius: 50%;
+  border: 20px solid #4C0804;
+  top: 19%;
+  left: 19%;
+  background: radial-gradient(circle, #8F1304 10%, #001E40);
+  text-align: center; }
+  .simon-wrap .simon-controls .start-btn {
+    font-family: "bungee", cursive;
+    background: linear-gradient(#423F3F, #2B2929);
+    position: relative;
+    top: 35px;
+    text-align: center;
+    font-size: 26px;
+    padding: 13px;
+    border-radius: 50px;
+    display: inline-block;
+    color: #A39E13;
+    cursor: pointer;
+    box-shadow: 0 7px 0 0px #1C1B1B; }
+    .simon-wrap .simon-controls .start-btn.pressed {
+      box-shadow: 0px 7px 7px 0px #1C1B1B inset; }
+  .simon-wrap .simon-controls .strict-mode-wrap {
+    position: relative;
+    margin-top: 60px;
+    font-family: "bungee", cursive;
+    color: #A39E13; }
+    .simon-wrap .simon-controls .strict-mode-wrap .strict-btn-wrap {
+      width: 30px;
+      background-color: #BAB1B1;
+      border-radius: 10px;
+      height: 15px;
+      display: inline-block;
+      margin: -2px 10px; }
+      .simon-wrap .simon-controls .strict-mode-wrap .strict-btn-wrap .strict-btn {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%; }
+        .simon-wrap .simon-controls .strict-mode-wrap .strict-btn-wrap .strict-btn.on {
+          background-color: #36700D;
+          float: right; }
+        .simon-wrap .simon-controls .strict-mode-wrap .strict-btn-wrap .strict-btn.off {
+          float: left;
+          background-color: #454141; }
