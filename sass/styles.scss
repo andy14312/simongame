@@ -14,7 +14,7 @@ $mainColor: #4C0804;
 $mainColorLighterShade: #AD1705;
 $simonBlueColor: #001E40;
 $simonBlueHover: #003878;
-$simonBlueFlash: #003B7D;
+$simonBlueFlash: #004A9E;
 $simonYellowColor: #A39E13;
 $simonYellowHover: #C4BF00;
 $simonYellowFlash: #F7F01D;
@@ -52,7 +52,7 @@ body {
   font-weight: bold;
 }
 
-.high-score-title {
+.score-title {
   font-family: $headersFont;
 }
 
@@ -79,11 +79,11 @@ body {
 .simon-blue {
   background-color: $simonBlueColor;
   transition: 0s 0.8s;
-  -webkit-transition: 0s 0.8s;
+  -webkit-transition: 0s 0.6s;
   border-radius: 150% 0 0 0;
 }
 
-.simon-blue:active {
+.simon-blue:active,.simon-blue.active {
   background-color: $simonBlueFlash;
   -webkit-transition: 0s;
   transition: 0s;
@@ -92,11 +92,11 @@ body {
 .simon-red {
   background-color: $simonRedColor;
   transition: 0s 0.8s;
-  -webkit-transition: 0s 0.8s;
+  -webkit-transition: 0s 0.6s;
   border-radius: 0 0 150% 0;
 }
 
-.simon-red:active {
+.simon-red:active,.simon-red.active {
   background-color: $simonRedFlash;
   -webkit-transition: 0s;
   transition: 0s;
@@ -104,11 +104,11 @@ body {
 .simon-green {
   background-color: $simonGreenColor;
   transition: 0s 0.8s;
-  -webkit-transition: 0s 0.8s;
+  -webkit-transition: 0s 0.6s;
   border-radius: 0 0 0 150%;
 }
 
-.simon-green:active {
+.simon-green:active,.simon-green.active {
   background-color: $simonGreenFlash;
   -webkit-transition: 0s;
   transition: 0s;
@@ -116,11 +116,11 @@ body {
 .simon-yellow {
   background-color: $simonYellowColor;
   transition: 0s 0.8s;
-  -webkit-transition: 0s 0.8s;
+  -webkit-transition: 0s 0.6s;
   border-radius: 0 150% 0 0;
 }
 
-.simon-yellow:active {
+.simon-yellow:active,.simon-yellow.active {
   background-color: $simonYellowFlash;
   -webkit-transition: 0s;
   transition: 0s;
@@ -153,6 +153,7 @@ body {
 
       &.pressed {
         box-shadow: 0px 7px 7px 0px #1C1B1B inset;
+        color: $simonRedColor;
       }
     }
   
@@ -168,11 +169,12 @@ body {
         height: 15px;
         display: inline-block;
         margin: -2px 10px;
-
+        cursor: pointer;
         .strict-btn {
           display: inline-block;
-          width: 15px;
-          height: 15px;
+          width: 13px;
+          height: 13px;
+          margin: 1px;
           border-radius: 50%;
           &.on {
             background-color: $simonGreenColor;
